@@ -154,16 +154,16 @@ class Picker extends React.Component<IPickerProp & IPickerProps, any> {
     });
     return (
       <View style={style}>
-        <View ref={el => this.indicatorRef = el} style={styles.indicator}/>
+        <View ref={el => this.indicatorRef = el} style={styles.indicator} />
         <ScrollView
           style={styles.scrollView}
           ref={el => (this.scrollerRef = el)}
           onScroll={this.onScroll}
           showsVerticalScrollIndicator={false}
           overScrollMode="never"
-          onTouchStart={(e) => this.props.onTouchStart(e)}
-          onMomentumScrollEnd={(e) => this.props.onTouchStart(e)}
-          onScrollEndDrag={(e) => this.props.onTouchStart(e)}
+          onTouchStart={(e) => {this.props.onTouchStart(e)}}
+          onMomentumScrollEnd={(e) => {this.props.onMomentumScrollEnd(e)}}
+          onScrollEndDrag={(e) => {this.props.onScrollEndDrag(e)}}
         >
           <View ref={el => (this.contentRef = el)}>{items}</View>
         </ScrollView>

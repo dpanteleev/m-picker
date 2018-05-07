@@ -161,11 +161,11 @@ var Picker = function (_React$Component) {
                     { style: styles.scrollView, ref: function ref(el) {
                             return _this2.scrollerRef = el;
                         }, onScroll: this.onScroll, showsVerticalScrollIndicator: false, overScrollMode: 'never', onTouchStart: function onTouchStart(e) {
-                            return _this2.props.onTouchStart(e);
+                            _this2.props.onTouchStart(e);
                         }, onMomentumScrollEnd: function onMomentumScrollEnd(e) {
-                            return _this2.props.onTouchStart(e);
+                            _this2.props.onMomentumScrollEnd(e);
                         }, onScrollEndDrag: function onScrollEndDrag(e) {
-                            return _this2.props.onTouchStart(e);
+                            _this2.props.onScrollEndDrag(e);
                         } },
                     React.createElement(
                         View,
