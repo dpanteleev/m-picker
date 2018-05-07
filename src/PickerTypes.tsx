@@ -11,5 +11,8 @@ export type IPickerProps = {
   defaultSelectedValue?: any;
   style?: any;
   onScrollChange?: (value: any) => void;
+  onTouchStart?: (value: any) => void;
+  onMomentumScrollEnd?: (value: any) => void;
+  onScrollEndDrag?: (value: any) => void;
   noAnimate?: boolean;
 };
